@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "catalog_version": "1.0.0",
+  "updated_at": "2026-11-27",
+  "plugins": [
+    {
+      "id": "diagnostics",
+      "name": "Diagnostics",
+      "version": "0.1.0",
+      "description": "Reports basic platform, architecture, compiler, pointer width and logical processor information to the Stackwell log.",
+      "author": "NULL.WORKSPACE",
+      "category": "system",
+      "api_version": 1,
+      "min_host_version": "0.1.0",
+      "repository": "https://github.com/Null-Workspace/Stackwell-plugins",
+      "release_asset": "stackwell-diagnostics.dll",
+      "platforms": ["windows-x64"],
+      "status": "source"
+    },
+    {
+      "id": "minimal-example",
+      "name": "Minimal Example",
+      "version": "0.1.0",
+      "description": "A minimal reference implementation of the Stackwell Plugin API v1 lifecycle.",
+      "author": "NULL.WORKSPACE",
+      "category": "development",
+      "api_version": 1,
+      "min_host_version": "0.1.0",
+      "repository": "https://github.com/Null-Workspace/Stackwell-plugins",
+      "release_asset": "stackwell-minimal-example.dll",
+      "platforms": ["windows-x64"],
+      "status": "source"
+    }
+  ]
+}
