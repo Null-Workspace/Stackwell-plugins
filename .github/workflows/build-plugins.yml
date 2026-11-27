@@ -47,3 +47,17 @@ jobs:
         shell: pwsh
         run: |
           gh release create "${{ github.ref_name }}" build/dist/plugins/*.dll build/dist/plugins/SHA256SUMS.txt --repo "${{ github.repository }}" --generate-notes
+
+      - name: Publish latest binaries for the plugin catalog
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          gh release view latest --repo "${{ github.repository }}" 2>$null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create latest --repo "${{ github.repository }}" --title "Latest Windows x64 plugins" --notes "Automatically built from the main branch. For stable releases, use a versioned release." --prerelease
+            if ($LASTEXITCODE -ne 0) { throw "Could not create latest plugin release." }
+          }
+          gh release upload latest build/dist/plugins/*.dll build/dist/plugins/SHA256SUMS.txt --repo "${{ github.repository }}" --clobber
+          if ($LASTEXITCODE -ne 0) { throw "Could not upload plugin binaries." }
