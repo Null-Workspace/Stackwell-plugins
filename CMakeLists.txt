@@ -49,7 +49,7 @@ stackwell_add_plugin(
 
 if(MSVC)
     foreach(target stackwell_diagnostics stackwell_minimal_example)
-        target_compile_options(${target} PRIVATE /W4 /permissive-)
+        target_compile_options(${target} PRIVATE /W4 /permissive- /Zc:__cplusplus)
     endforeach()
 else()
     foreach(target stackwell_diagnostics stackwell_minimal_example)
