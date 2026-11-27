@@ -14,8 +14,12 @@
       "min_host_version": "0.1.0",
       "repository": "https://github.com/Null-Workspace/Stackwell-plugins",
       "release_asset": "stackwell-diagnostics.dll",
-      "platforms": ["windows-x64"],
-      "status": "source"
+      "platforms": [
+        "windows-x64"
+      ],
+      "status": "available",
+      "download_url": "https://github.com/Null-Workspace/Stackwell-plugins/releases/download/latest/stackwell-diagnostics.dll",
+      "checksum_url": "https://github.com/Null-Workspace/Stackwell-plugins/releases/download/latest/SHA256SUMS.txt"
     },
     {
       "id": "minimal-example",
@@ -28,8 +32,12 @@
       "min_host_version": "0.1.0",
       "repository": "https://github.com/Null-Workspace/Stackwell-plugins",
       "release_asset": "stackwell-minimal-example.dll",
-      "platforms": ["windows-x64"],
-      "status": "source"
+      "platforms": [
+        "windows-x64"
+      ],
+      "status": "available",
+      "download_url": "https://github.com/Null-Workspace/Stackwell-plugins/releases/download/latest/stackwell-minimal-example.dll",
+      "checksum_url": "https://github.com/Null-Workspace/Stackwell-plugins/releases/download/latest/SHA256SUMS.txt"
     }
   ]
 }
