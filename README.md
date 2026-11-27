@@ -34,7 +34,7 @@ cmake -S . -B build
 cmake --build build --config Release
 ```
 
-The resulting plugin binaries are written to `build/dist/plugins`. On Windows they are standalone `.dll` files. Copy **one DLL per plugin** directly into Stackwell's configured plugin directory. Do not copy the source tree or SDK files into the runtime plugin directory.
+The resulting plugin binaries are written to `build/dist/plugins`. On Windows they are standalone `.dll` files. Users do not need to build anything: every successful build on `main` publishes ready-to-use DLLs to the rolling [Latest Plugins release](https://github.com/Null-Workspace/Stackwell-plugins/releases/tag/latest). Stable version tags publish versioned releases. Copy **one DLL per plugin** directly into Stackwell's configured plugin directory. Do not copy the source tree or SDK files into the runtime plugin directory.
 
 ### Current API scope
 
@@ -64,7 +64,7 @@ cmake -S . -B build
 cmake --build build --config Release
 ```
 
-Готовые бинарники появятся в `build/dist/plugins`. В Windows каждый плагин — отдельный файл `.dll`. Для установки скопируй **только DLL** в настроенную папку плагинов Stackwell. Исходники и SDK в папку плагинов не копируются.
+Готовые бинарники появятся в `build/dist/plugins`. Но обычному пользователю собирать их не нужно: после успешной сборки `main` готовые DLL автоматически публикуются в [Latest Plugins](https://github.com/Null-Workspace/Stackwell-plugins/releases/tag/latest). Стабильные версии публикуются отдельными релизами. Для ручной установки нужна **только DLL**. Исходники и SDK в папку плагинов не копируются.
 
 ### Что умеет API сейчас
 
