@@ -3,30 +3,99 @@
   "$id": "https://raw.githubusercontent.com/Null-Workspace/Stackwell-plugins/main/catalog.schema.json",
   "title": "Stackwell Plugin Catalog",
   "type": "object",
-  "required": ["schema_version", "catalog_version", "plugins"],
+  "required": [
+    "schema_version",
+    "catalog_version",
+    "plugins"
+  ],
   "properties": {
-    "schema_version": { "const": 1 },
-    "catalog_version": { "type": "string" },
-    "updated_at": { "type": "string", "format": "date" },
+    "schema_version": {
+      "const": 1
+    },
+    "catalog_version": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
     "plugins": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "version", "description", "author", "api_version", "repository", "release_asset", "platforms", "status"],
+        "required": [
+          "id",
+          "name",
+          "version",
+          "description",
+          "author",
+          "api_version",
+          "repository",
+          "release_asset",
+          "platforms",
+          "status",
+          "download_url",
+          "checksum_url"
+        ],
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-          "name": { "type": "string" },
-          "version": { "type": "string" },
-          "description": { "type": "string" },
-          "author": { "type": "string" },
-          "category": { "type": "string" },
-          "api_version": { "type": "integer", "minimum": 1 },
-          "min_host_version": { "type": "string" },
-          "repository": { "type": "string", "format": "uri" },
-          "release_asset": { "type": "string" },
-          "platforms": { "type": "array", "items": { "type": "string" } },
-          "status": { "enum": ["source", "available", "deprecated"] },
-          "sha256": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" }
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "api_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "min_host_version": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "release_asset": {
+            "type": "string"
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "source",
+              "available",
+              "deprecated"
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          },
+          "download_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "checksum_url": {
+            "type": "string",
+            "format": "uri"
+          }
         },
         "additionalProperties": false
       }
