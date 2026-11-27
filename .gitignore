@@ -1,0 +1,8 @@
+/build/
+/out/
+/dist/
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
